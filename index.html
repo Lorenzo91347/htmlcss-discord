@@ -2,52 +2,100 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <link rel="stylesheet" href="style.css">
-    <title>Document</title>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>HTML CSS Struttura Discord</title>
+    <!-- CSS Default -->
+    <link rel="stylesheet" href="style.css" />
+    <!-- /CSS Default -->
 </head>
 
-<body>
-    <header class="head">
-        <div>Logo</div>
-        <div class="link">Link Link Link Link Link</div>
-        <div>Login</div>
+<body class="debug">
+    <!-- Intestazione -->
+    <header>
+        <!-- header top-->
+        <div class="topbar">
+            <div class="container big">
+                <!-- top menu-->
+                <div class="top-menu">
+                    <div class="header-logo">Logo</div>
+                    <nav class="header-link">link link link link link link</nav>
+                    <div class="header-login">Login</div>
+                </div>
+            </div>
+        </div>
+        <!-- /header top-->
+        <!-- header bottom-->
+        <div class="jumbotron">
+            <div class="container medium">
+                <div class="content">jumbotron</div>
+            </div>
+        </div>
+        <!-- /header bottom-->
     </header>
+    <!-- /Intestazione -->
+    <!-- Main -->
     <main>
-        <div class="box">
-            <div class="bluebox"></div>
+        <!-- Sezione 1-->
+        <div class="section">
+            <div class="container big">
+                <div class="row">
+                    <div class="col-big">1</div>
+                    <div class="col-small">2</div>
+                </div>
+            </div>
         </div>
-        <div class="boxes">
-            <div class="box1"></div>
-            <div class="box2"></div>
+        <!-- /Sezione 1-->
+        <!-- Sezione 2-->
+        <div class="section">
+            <div class="container big">
+                <div class="row">
+                    <div class="col-small">2</div>
+                    <div class="col-big">1</div>
+                </div>
+            </div>
         </div>
-        <div class="boxes2">
-            <div class="box3"></div>
-            <div class="box4"></div>
+        <!-- /Sezione 2-->
+        <!-- Sezione 3-->
+        <div class="section">
+            <div class="container big">
+                <div class="row">
+                    <div class="col-big">1</div>
+                    <div class="col-small">2</div>
+                </div>
+            </div>
         </div>
-        <div class="boxes3">
-            <div class="box5"></div>
-            <div class="box6"></div>
+        <!-- /Sezione 3-->
+        <!-- Sezione 4-->
+        <div class="section">
+            <div class="container big">
+                <div class="row-big">
+                    <div class="col-full">1</div>
+                </div>
+            </div>
         </div>
-        <div class="boxes4">
-            <div class="box7"></div>
-        </div>
-        <div class="boxes5">
-            <div class="box8"></div>
-            <div class="box9"></div>
-            <div class="box10"></div>
-            <div class="box11"></div>
-            <div class="box12"></div>
-        </div>
-        <hr>
-        <div class="footer">
-            <div>Logo</div>
-            <div>Bottone</div>
-        </div>
+        <!-- /Sezione 4-->
     </main>
-    <footer></footer>
-
+    <!-- /Main -->
+    <!-- Piede del progetto -->
+    <footer>
+        <div class="footer-top container big">
+            <div class="row">
+                <div class="col-small">1</div>
+                <div class="col-big">
+                    <div class="col">1</div>
+                    <div class="col">2</div>
+                    <div class="col">3</div>
+                    <div class="col">4</div>
+                </div>
+            </div>
+        </div>
+        <hr />
+        <div class="footer-bottom container big">
+            <div class="row">2</div>
+        </div>
+    </footer>
+    <!-- /Piede del progetto -->
 </body>
 
 </html>
