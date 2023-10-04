@@ -5,7 +5,9 @@ Reset
 */
 
 :root {
-    --bg-topbar: #abd7e6;
+    --bg-topbar: #255ee9;
+    --bg-section: #f6f6f6;
+    --bg-footer: #23272a;
 }
 
 * {
@@ -21,6 +23,8 @@ Reset
   ************
   */
 
+/* bordi debug */
+
 .debug header .top-menu>*,
 .debug header .jumbotron .content,
 .debug main .section .row>div,
@@ -29,24 +33,62 @@ Reset
     border: 2px dashed black;
 }
 
-.debug footer .row .col-big .col {
-    border: 2px dashed white;
+.debug header {
+    border-bottom: 4px solid var(--bg-topbar);
+}
+
+.debug header .top-menu {
+    background-color: #daa520;
+}
+
+.debug header .jumbotron {
+    background-color: #00008b;
 }
 
 .debug header .jumbotron .content {
     height: 415px;
+    background-color: #ee82ee;
 }
 
-.debug main .section .row {
+.debug main .section.small .row {
     height: 525px;
 }
 
-.debug main .section .row-big .col-full {
+.debug main .section .row .col-big {
+    background-color: #1e90ff;
+}
+
+.debug main .section .row .col-small {
+    background-color: #ffc0cb;
+}
+
+.debug main .section.large .col-full {
+    background-color: #228b22;
     height: 940px;
 }
 
-.debug footer .row {
+.debug footer .footer-top .row {
     height: 600px;
+}
+
+.debug footer .row .col-big .col {
+    border: 2px dashed white;
+}
+
+.debug footer .footer-top .col-small {
+    background-color: #f08080;
+}
+
+.debug footer .footer-top .col-big {
+    background-color: #20b2aa;
+}
+
+.debug footer .footer-bottom {
+    background-color: #7fffd4;
+}
+
+.debug footer .footer-bottom .row .col {
+    background-color: #ffb6c1;
 }
 
 /*
@@ -67,9 +109,66 @@ Reset
     max-width: 950px;
 }
 
-.row,
-.row-big {
+.row {
     display: flex;
+}
+
+ul {
+    list-style-type: none;
+}
+
+a {
+    color: white;
+    text-decoration: none;
+}
+
+.btn {
+    display: inline-block;
+    background-color: white;
+    color: black;
+    border-radius: 30px;
+    padding: 15px 20px;
+}
+
+.btn.btn-small {
+    font-size: 13px;
+    padding: 10px 15px;
+}
+
+.btn.btn-primary {
+    background-color: #23272a;
+    color: white;
+}
+
+.btn.btn-secondary {
+    background-color: #7289da;
+    color: white;
+}
+
+/*
+  ************
+  Typography
+  ************
+  */
+
+body {
+    font-family: Whitney, 'Helvetica Neue', Helvetica, Arial, sans-serif;
+    font-size: 18px;
+}
+
+p {
+    line-height: 1.6;
+}
+
+h1,
+h2 {
+    font-size: 40px;
+    margin-bottom: 30px;
+}
+
+h3 {
+    font-size: 27px;
+    margin-bottom: 40px;
 }
 
 /*
@@ -78,12 +177,11 @@ Reset
   ************
   */
 
-header {
-    border-bottom: 4px solid var(--bg-topbar);
-    background-image: url(/img/jumbo.png);
-}
-
 /* topbar */
+
+header {
+    color: white;
+}
 
 header .topbar {
     background-color: var(--bg-topbar);
@@ -91,12 +189,12 @@ header .topbar {
 }
 
 header .top-menu {
-    background-color: #daa520;
     display: flex;
+    align-items: center;
 }
 
-header .top-menu>* {
-    padding: 10px;
+header #logo {
+    display: block;
 }
 
 header .top-menu .header-logo,
@@ -109,6 +207,13 @@ header .top-menu .header-link {
     text-align: center;
 }
 
+header .top-menu .header-link .main-menu {
+    display: flex;
+    gap: 40px;
+    justify-content: center;
+    font-size: 14px;
+}
+
 header .top-menu .header-login {
     text-align: right;
 }
@@ -116,12 +221,24 @@ header .top-menu .header-login {
 /* jumbotron */
 
 header .jumbotron {
-    background-color: #00008b;
-    padding: 50px;
+    background-color: var(--bg-topbar);
+    background-image: url(../img/jumbo.png);
+    background-position: center;
+    background-size: cover;
+    padding: 80px;
 }
 
 header .jumbotron .content {
-    background-color: #ee82ee;
+    text-align: center;
+    padding: 50px;
+}
+
+header .jumbotron .content .btn-container {
+    margin-top: 20px;
+    display: flex;
+    gap: 20px;
+    justify-content: center;
+    align-items: center;
 }
 
 /*
@@ -131,36 +248,42 @@ header .jumbotron .content {
   */
 
 main .section {
-    padding: 50px;
+    padding: 100px 50px;
 }
 
-main .section:nth-child(even) {
-    background-color: #d3d3d3;
+main :nth-child(even of .section) {
+    background-color: var(--bg-section);
 }
 
-main .section .row,
-main .section .row-big {
-    display: flex;
-}
-
-main .section .row .col-big {
-    background-color: #1e90ff;
+main .section .col-big {
     width: 60%;
 }
 
-main .section .row .col-small {
-    background-color: #ffc0cb;
+main .section .col-small {
     width: 40%;
+    padding: 40px 80px;
 }
 
-main .section .row-big .col-full {
-    background-color: #228b22;
+main .section .col-full {
     flex-grow: 1;
+    text-align: center;
+    padding: 0 70px;
 }
 
-/* .bg-section {
-    background-color: #d3d3d3;
-  } */
+main .section img {
+    width: 100%;
+}
+
+main .section .call-to-action {
+    margin-top: 40px;
+}
+
+main .section .call-to-action h3 {
+    background-image: url('../img/stars.svg');
+    padding: 35px;
+    background-position: center top;
+    background-repeat: no-repeat;
+}
 
 /*
   ************
@@ -169,26 +292,87 @@ main .section .row-big .col-full {
   */
 
 footer {
-    /* background-color: #23272a; */
-    background-color: #daa520;
-    padding-top: 10px;
+    background-color: var(--bg-footer);
+    padding-top: 80px;
 }
+
+/* footer top */
 
 footer .footer-top {
     margin-bottom: 40px;
 }
 
 footer .footer-top .col-small {
-    background-color: #f08080;
     width: 30%;
+    color: white;
+}
+
+footer .footer-top .col-small h4 {
+    font-size: 35px;
+    color: #7289da;
+    margin-bottom: 17px;
+}
+
+footer .footer-top .col-small .select-language {
+    font-size: 14px;
+    margin-bottom: 17px;
+}
+
+footer .footer-top .col-small .select-language i {
+    font-size: 12px;
+}
+
+footer .footer-top .col-small .select-language .flag {
+    width: 25px;
+    vertical-align: middle;
+    margin-right: 10px;
+}
+
+footer .footer-top .col-small .social ul {
+    display: flex;
+    gap: 20px;
 }
 
 footer .footer-top .col-big {
-    background-color: #20b2aa;
     width: 70%;
     display: flex;
+    justify-content: space-between;
 }
 
-footer .footer-top .col-big .col {
-    flex-grow: 1;
+footer .footer-top .col-big .col li h5 {
+    color: #7289da;
+    font-size: 15px;
+}
+
+footer .footer-top .col-big .col li {
+    color: white;
+    margin: 10px 0;
+    font-size: 14px;
+}
+
+/* footer bottom */
+
+footer .footer-bottom {
+    margin-top: 20px;
+    padding: 15px 0;
+    border-top: 1px solid #4f5d8c;
+}
+
+footer .footer-bottom .row {
+    justify-content: space-between;
+}
+
+footer .footer-bottom .col {
+    padding: 10px 0;
+}
+
+.wave {
+    height: 100px;
+    fill: green;
+    background-image: url('../img/wave.svg');
+    opacity: 0.04;
+}
+
+.wave.reverse {
+    transform: rotateX(0.5turn);
 }
